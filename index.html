@@ -35,19 +35,19 @@
       `;
 
       document.getElementById('yesConfirm').addEventListener('click', () => {
-        response.textContent = "Я так рад! Ты — мое счастье! 💖";
+        response.textContent = "и я тебя люблю! 💖";
         response.classList.add('show');
       });
 
       document.getElementById('noConfirm').addEventListener('click', () => {
-        response.textContent = "Ой, тогда я буду ждать, пока ты передумаешь... 😔";
+        response.textContent = "тут ниче нет, такое невозможно... 😔";
         response.classList.add('show');
       });
     });
 
     document.getElementById('noBtn').addEventListener('click', () => {
       clearResponse();
-      response.textContent = "Ой, тогда я буду ждать, пока ты передумаешь... 😔";
+      response.textContent = "тут ниче нет, такое невозможно... 😔";
       response.classList.add('show');
     });
 
