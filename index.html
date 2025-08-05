@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Обо мне</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Для Анны — Вопрос любви</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Привет, я Иракли</h1>
-  <p>Я начинающий фронтенд-разработчик. Изучаю HTML, CSS и React. Люблю спорт и технику.</p>
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQts2XhJ6JXcrMawmbT17h1TZPrY4I0Eaf9xA&s" alt="Моё фото">
+  <div class="container">
+    <h1>Анна, у меня к тебе вопрос...</h1>
+    <p>Ты меня любишь?</p>
+    <div class="buttons">
+      <button id="yesBtn">Да ❤️</button>
+      <button id="noBtn">Нет 😢</button>
+    </div>
+    <div id="response" class="response"></div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    const response = document.getElementById('response');
+
+    yesBtn.addEventListener('click', () => {
+      response.textContent = "Я так рад! Ты — мое счастье! 💖";
+      response.classList.add('show');
+      setTimeout(() => response.classList.remove('show'), 5000);
+    });
+
+    noBtn.addEventListener('click', () => {
+      response.textContent = "Ой, тогда я буду ждать, пока ты передумаешь... 😔";
+      response.classList.add('show');
+      setTimeout(() => response.classList.remove('show'), 5000);
+    });
+  </script>
 </body>
 </html>
