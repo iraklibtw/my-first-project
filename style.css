@@ -1,15 +1,58 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #5a1a01;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
   text-align: center;
-  padding: 50px;
+}
+
+.container {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 350px;
 }
 
 h1 {
-  color: #333;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
-img {
-  border-radius: 10px;
-  margin-top: 20px;
+p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.buttons button {
+  background: #ff5e62;
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  margin: 0 15px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background: #ff2a2a;
+}
+
+.response {
+  margin-top: 30px;
+  font-size: 1.2rem;
+  color: #c41e1e;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  min-height: 40px;
+}
+
+.response.show {
+  opacity: 1;
 }
